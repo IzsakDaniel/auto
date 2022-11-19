@@ -6,9 +6,11 @@ use App\Http\Controllers\BalesetController;
 use App\Http\Controllers\TulajController;
 
 
-Route::get('/',[AutoController::class,"index"]);
+Route::get('/auto',[AutoController::class,"index"]);
+Route::post('/auto-save',[AutoController::class,"store"]);
 
 Route::get('/ajaj',[BalesetController::class,"index"]);
+Route::post('/ajaj-save',[BalesetController::class,"store"]);
 
 Route::get('/tulaj',[TulajController::class,"index"]);
-
+Route::post('/tulaj-save',[TulajController::class,"store"]);
