@@ -3,15 +3,17 @@
 @section('content')
 @include('menu')
 
-<h1 id="test">Autók listája</h1>
-<div class="container bg-dark text-white rounded-5">
+
+<div class="container p-5 my-5 border rounded-5 bg-dark text-white col-lg-6">
+   <div class="container  p-2 my-2 text-warning"><h1 id="test">Autók listája</h1></div> 
     <div class="row">
         <div class="col">
-            <table class="table-striped table table-dark text-white m-2 text-center">
-                <thead class="table-light">
+            <table class="table-striped table table-dark text-white m-2 text-center " >
+                <thead class="table-secondary text-dark fw-bold fst-italic">
                     <td>Rendszám</td>
                     <td>Típus</td>
                     <td>Szín</td>
+                    <td>Információk</td>
                 </thead>
                 @foreach ($autok as $item)
                 <tr>
@@ -20,7 +22,7 @@
                     <td>{{$item->szin}}</td>
                     <td>
                         <form method="POST">
-                            <button type="button" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#myModal">Információk</button>
+                            <button type="button" class="btn btn-warning text-black"data-bs-toggle="modal" data-bs-target="#myModal">Információk</button>
                         </form>
                     </td>
                 </tr>
