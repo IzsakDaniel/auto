@@ -2,7 +2,7 @@
     <div class="container-fluid">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="./">Autok regisztrálása</a>
+          <a class="nav-link" href="./auto">Autok regisztrálása</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="./tulaj">Tulajdonos regisztrálása</a>

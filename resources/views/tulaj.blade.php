@@ -5,9 +5,12 @@
 
 <div class="container p-5 my-5 border rounded-5 bg-dark text-white col-lg-6">
   <div class="container p-2 my-2 text-warning"><h1>Tulajdonos regisztrálása</h1> </div>
-<form method="post" action="{{url('tulajdonos-save')}}>
+<form method="post">
   @csrf
-    <div class="form-group col-md-2">
+      @if (session()->get('kesz'))
+      <div class="alert alert-success">{{session()->get('kesz')}}  </div>
+      @endif
+    <div class="form-group col-mb-3">
       <label for="tulaj" class="form-label">Tulajdonos neve</label>
       <input type="text" class="form-control" id="tnev" placeholder="Add meg a neved" name="tnev">
     </div>
