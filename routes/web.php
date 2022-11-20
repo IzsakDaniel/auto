@@ -15,4 +15,4 @@ Route::get('/ajaj',[BalesetController::class,"index"]);
 Route::post('/ajaj',[BalesetController::class,"store"]);
 
 Route::get('/tulaj',[TulajController::class,"index"]);
-Route::post('/tulaj-save',[TulajController::class,"store"]);
+Route::post('/tulaj',[TulajController::class,"store"]);

@@ -12,15 +12,30 @@
       @endif
     <div class="form-group col-mb-3">
       <label for="tulaj" class="form-label">Tulajdonos neve</label>
-      <input type="text" class="form-control" id="tnev" placeholder="Add meg a neved" name="tnev">
+      <input type="text" class="form-control" id="tnev" placeholder="Add meg a neved" name="tnev"  value="{{old('tnev')}}">
+      @error('tnev')
+                    <div class="alert alert-danger">
+                        {{$message}}
+                    </div>
+                @enderror
     </div>
     <div class="mb-3 ">
       <label for="pwd" class="form-label">Tulajdonjog kezdete</label>
-      <input name="start" type="text" class="form-control" id="start">
+      <input name="start" type="date" class="form-control" id="start" value="{{old('start')}}">
+      @error('start')
+                    <div class="alert alert-danger">
+                        {{$message}}
+                    </div>
+                @enderror
     </div>
     <div class="mb-3 ">
         <label for="pwd" class="form-label">Tulajdonjog vége</label>
-        <input name="end" type="text" class="form-control" id="end">
+        <input name="end" type="date" class="form-control" id="end" value="{{old('end')}}">
+        @error('end')
+                    <div class="alert alert-danger">
+                        {{$message}}
+                    </div>
+                @enderror
       </div>
     <div class="">
     <button type="submit" class="btn btn-warning">Küldés</button>

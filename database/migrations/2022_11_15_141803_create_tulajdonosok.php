@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('tulajdonosok', function (Blueprint $table) {
             $table->id("t_id");
             $table->string("nev",50);
-            $table->dateTime("tulajdonjog_kezd");
-            $table->dateTime("tulajdonjog_veg");
+            $table->date("tulajdonjog_kezd");
+            $table->date("tulajdonjog_veg");
         });
     }
 
