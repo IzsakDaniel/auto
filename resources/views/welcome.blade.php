@@ -4,7 +4,7 @@
 @include('menu')
 
 <h1 id="test">Autók listája</h1>
-<div class="container text-white rounded-2">
+<div class="container bg-dark text-white rounded-5">
     <div class="row">
         <div class="col">
             <table class="table-striped table table-dark text-white m-2 text-center">
@@ -12,7 +12,6 @@
                     <td>Rendszám</td>
                     <td>Típus</td>
                     <td>Szín</td>
-                    <td>Részletek</td>
                 </thead>
                 @foreach ($autok as $item)
                 <tr>
@@ -21,7 +20,7 @@
                     <td>{{$item->szin}}</td>
                     <td>
                         <form method="POST">
-                            <button type="button" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#myModal">Részletek</button>
+                            <button type="button" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#myModal">Információk</button>
                         </form>
                     </td>
                 </tr>
@@ -48,7 +47,7 @@
                                 @foreach ($tulaj as $elem)
                                 <div class="row">
                                     <div class="col">
-                                        {{$elem->tulajdonos_neve}}
+                                        {{$elem->nev}}
                                     </div>
                                     </div>
                                 @endforeach
